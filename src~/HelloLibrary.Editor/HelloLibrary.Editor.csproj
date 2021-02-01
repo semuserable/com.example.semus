@@ -11,10 +11,24 @@
             <HintPath>$(UnityPath)\UnityEditor.dll</HintPath>
             <Private>false</Private>
         </Reference>
-
         <Reference Include="UnityEngine">
             <HintPath>$(UnityPath)\UnityEngine.dll</HintPath>
             <Private>false</Private>
         </Reference>
     </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="SentryLogoLight.png" />
+        <EmbeddedResource Include="SentryLogoDark.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HelloLibrary\HelloLibrary.csproj">
+          <Private>False</Private>
+      </ProjectReference>
+    </ItemGroup>
+
+    <!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="IF EXIST $(OutDir.TrimEnd('\'))/Sentry.dll DEL $(OutDir.TrimEnd('\'))/Sentry.dll" />
+    </Target>-->
 </Project>
