@@ -1,3 +1,3 @@
 # unity-upm-example
 
-Source code is taken from https://github.com/getsentry/sentry-unity/tree/feature/sentry-unity
+Source code is taken from [sentry-unity](https://github.com/getsentry/sentry-unity).
