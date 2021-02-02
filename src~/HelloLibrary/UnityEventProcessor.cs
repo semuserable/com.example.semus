@@ -156,6 +156,7 @@ namespace Sentry.Unity
                 int lineNo;
 
                 var item = stackList[i];
+
                 if (item == string.Empty)
                 {
                     continue;
@@ -209,10 +210,10 @@ namespace Sentry.Unity
                         filename = string.Empty; // we have no clue
                     }
                 }
-
+                
                 frames.Add(new SentryStackFrame
                 {
-                    FileName = Path.GetFileName(filename),
+                    FileName = TryResolveFIleNameForMono(filename),
                     AbsolutePath = filename,
                     Function = functionName,
                     LineNumber = lineNo,
@@ -236,6 +237,19 @@ namespace Sentry.Unity
                 Type = excType,
                 Value = excValue
             };
+        }
+
+        private static string TryResolveFIleNameForMono(string fileName)
+        {
+            try
+            {
+                return Path.GetFileName(fileName);
+            }
+            catch
+            {
+                // mono path
+                return "Unknown";
+            }
         }
     }
 }

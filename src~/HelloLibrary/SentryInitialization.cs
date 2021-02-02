@@ -48,7 +48,9 @@ namespace Sentry.Unity
             _ = SentrySdk.Init(o =>
             {
                 o.Dsn = options.Dsn;
-
+                // TODO: StackTraceMode.Original didn't help for Path.GetFileName(), https://github.com/getsentry/sentry-unity/issues/46
+                o.StackTraceMode = StackTraceMode.Original;
+                
                 if (options.Logger != null)
                 {
                     o.Debug = true;
