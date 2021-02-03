@@ -2,6 +2,6 @@
 **/bin/
 **/obj/
 
-Samples~/**/Library
-Samples~/**/Logs
-Samples~/**/Temp
+samples/**/Library
+samples/**/Logs
+samples/**/Temp

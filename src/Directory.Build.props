@@ -5,8 +5,8 @@
         <UnityVersion>2019.4.18f1</UnityVersion>
         <WarningsAsErrors>true</WarningsAsErrors>
         <GenerateDependencyFile>false</GenerateDependencyFile>
-        <PackageRuntimePath>../../Runtime</PackageRuntimePath>
-        <PackageEditorPath>../../Editor</PackageEditorPath>
+        <PackageRuntimePath>../../package/Runtime</PackageRuntimePath>
+        <PackageEditorPath>../../package/Editor</PackageEditorPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="Exists('C:\Program Files\Unity\Hub\Editor\$(UnityVersion)\Editor\Data\Managed\UnityEngine.dll')">
