@@ -26,9 +26,8 @@
       <ProjectReference Include="..\HelloLibrary\HelloLibrary.csproj">
           <Private>False</Private>
       </ProjectReference>
+      <ProjectReference Include="..\sentry-dotnet\src\Sentry\Sentry.csproj">
+          <Private>False</Private>
+      </ProjectReference>
     </ItemGroup>
-
-    <!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="IF EXIST $(OutDir.TrimEnd('\'))/Sentry.dll DEL $(OutDir.TrimEnd('\'))/Sentry.dll" />
-    </Target>-->
 </Project>
